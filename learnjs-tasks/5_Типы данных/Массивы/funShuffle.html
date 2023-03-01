@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>funShuffle</title>
+</head>
+<body>
+<script>
+  function shuffle(arr){
+    return arr.map(i => [Math.random(), i]).sort().map(i =>i[1]);
+  }
+  arr = [3, 2, 1];
+
+  for (let i =  0; i < 5; i++){
+    alert(shuffle(arr));
+  }
+
+</script>
+
+</body>
+</html>

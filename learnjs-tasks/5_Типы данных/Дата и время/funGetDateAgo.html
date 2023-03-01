@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>funGetDateAgo</title>
+</head>
+<body>
+<script>
+    function getDateAgo(date, day) {
+        let newDate = new Date(date);
+        newDate.setDate(date.getDate() - day);
+        return newDate.getDate();
+
+    }
+
+    let date = new Date(2015, 0, 2);
+
+    alert(getDateAgo(date, 1));
+    alert(getDateAgo(date, 2));
+    alert( getDateAgo(date, 365) );
+
+</script>
+
+</body>
+</html>

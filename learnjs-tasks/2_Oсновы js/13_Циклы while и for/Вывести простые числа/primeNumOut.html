@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+<script>
+  let  limit = prompt("Введите число > 1", "Введите число сюда");
+  for (let i = 2;  i <= limit; i++) {
+      let check = true;
+      for (let j = 2; j < i ; j++) {
+          if (i % j === 0) {
+              check = false;
+              break;
+          }
+      }
+      if (check){
+          alert(i)
+      }
+  }
+
+
+
+</script>
+
+</body>
+</html>

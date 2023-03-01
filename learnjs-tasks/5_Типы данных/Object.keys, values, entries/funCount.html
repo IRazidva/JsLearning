@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>funCount</title>
+</head>
+<body>
+<script>
+
+  function count(obj){
+    let i = 0;
+    for (let key of Object.keys(obj)){
+      i++;
+    }
+    return i;
+  }
+  let user = {
+    name: 'John',
+    age: 30
+  };
+
+  alert( count(user) );
+</script>
+
+</body>
+</html>

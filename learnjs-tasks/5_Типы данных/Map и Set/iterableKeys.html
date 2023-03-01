@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>iterableKeys</title>
+</head>
+<body>
+<script>
+  let map = new Map();
+
+  map.set("name", "John");
+
+  //Ответ: Чтобы использовать .push(), нужно конвертировать Map в массив
+  let keys = Array.from(map.keys());
+
+  keys.push("more");
+
+  alert(keys);
+
+  for(let keys of map.keys()){
+    alert(keys);
+  }
+  for(let val of map.values()){
+    alert(val);
+  }
+  for(let entry  of map){
+    alert(entry );
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>funUnique</title>
+</head>
+<body>
+<script>
+  function unique(arr) {
+    return arr.filter((el, ind) => ind === arr.indexOf(el));
+  }
+
+  let strings = ["кришна", "кришна", "харе", "харе",
+    "харе", "харе", "кришна", "кришна", ":-O"
+  ];
+
+  alert( unique(strings) );
+
+</script>
+
+</body>
+</html>

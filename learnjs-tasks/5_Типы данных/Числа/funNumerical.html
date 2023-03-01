@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>funNumerical</title>
+</head>
+<body>
+<script>
+    function readNumber() {
+        let numeric;
+        do {
+            numeric = prompt("Введите числовое значение. Для отмены ничего не вводите и нажмите \"Ok\" или \"Отмена\"", "");
+        } while (!isFinite(numeric));
+
+        if(numeric === null || numeric === ''){
+            return null;
+        } else {
+            return +numeric;
+        }
+    }
+
+    readNumber();
+</script>
+
+</body>
+</html>

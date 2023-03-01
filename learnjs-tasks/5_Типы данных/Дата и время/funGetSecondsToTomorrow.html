@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>funGetSecondsToTomorrow</title>
+</head>
+<body>
+<script>
+  function getSecondsToTomorrow(){
+    let now = new Date();
+    alert(now);
+    let ending = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1);
+    alert(ending);
+
+    let timEndOfDay = ending - now;
+    return Math.round(timEndOfDay / 1000);
+  }
+
+  alert(getSecondsToTomorrow());
+</script>
+
+</body>
+</html>

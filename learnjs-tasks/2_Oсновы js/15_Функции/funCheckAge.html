@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+<script>
+    let age = prompt('Сколько вам лет?', "Введите возраст");
+
+    function checkAge1(age){
+        return age > 18 ? true : confirm("Родители разрешили?");
+    }
+
+    function checkAge2(age){
+        return age > 18 || confirm("Родители разрешили?");
+    }
+
+    checkAge1(age);
+    checkAge2(age);
+
+</script>
+
+</body>
+</html>

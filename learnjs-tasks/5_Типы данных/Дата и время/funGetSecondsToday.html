@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>funGetSecondsToday</title>
+</head>
+<body>
+<script>
+    function getSecondsToday() {
+        let now = new Date();
+        alert(now);
+        let starting = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+        alert(starting);
+
+        let timeHasPassedToday = now  - starting;
+        return Math.round(timeHasPassedToday / 1000);
+    }
+
+    alert( getSecondsToday() );
+
+</script>
+
+</body>
+</html>

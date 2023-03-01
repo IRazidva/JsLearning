@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>multiplyNumeric</title>
+</head>
+<body>
+<script>
+    function multiplyNumeric(obj) {
+        for (let value in obj) {
+            typeof (obj[value]) === "number" ?
+                obj[value] *=  2 :
+                obj[value] = obj[value];
+        }
+    }
+    let menu = {
+        width: 200,
+        height: 300,
+        title: "My menu"
+    };
+
+    multiplyNumeric(menu);
+
+    console.log(menu);
+</script>
+
+</body>
+</html>

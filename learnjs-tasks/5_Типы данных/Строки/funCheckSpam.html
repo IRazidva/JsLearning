@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>funCheckSpam</title>
+</head>
+<body>
+<script>
+  function checkSpam(str){
+      return str.toUpperCase().includes("viagra".toUpperCase()) || str.toUpperCase().includes("XXX".toUpperCase());
+  }
+  alert(checkSpam('buy ViAgRA now'));
+  alert(checkSpam('free xxxxx'));
+  alert(checkSpam("innocent rabbit"));
+</script>
+
+</body>
+</html>

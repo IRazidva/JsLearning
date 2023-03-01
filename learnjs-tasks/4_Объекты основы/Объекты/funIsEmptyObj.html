@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>funIsEmptyObj</title>
+</head>
+<body>
+<script>
+  function  isEmpty(obj) {
+    let  i = 0;
+    for (let key in obj) {
+      i++
+    }
+    return i <= 0;
+  }
+
+  let schedule = {};
+  alert( isEmpty(schedule) );
+
+  schedule["8:30"] = "get up";
+  alert( isEmpty(schedule) );
+
+</script>
+</body>
+</html>

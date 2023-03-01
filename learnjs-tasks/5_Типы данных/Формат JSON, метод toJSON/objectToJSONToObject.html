@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>objectToJSONToObject</title>
+</head>
+<body>
+<script>
+  let user = {
+    name: "Василий Иванович",
+    age: 35
+  };
+  let anotherUser =  JSON.stringify(user) ;
+  alert(anotherUser);
+  anotherUser = JSON.parse(anotherUser);
+  alert(anotherUser);
+</script>
+
+</body>
+</html>

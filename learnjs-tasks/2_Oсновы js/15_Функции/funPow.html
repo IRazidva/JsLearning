@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+<script>
+  let num = prompt("Введите первое число", "Число");
+  let power = prompt("Введите степень, в которую хотите возвести число", "Степень числа");
+
+  function pow(x, n){
+    if (n < 0) {
+        return alert("Степень должна быть натуральным числом");
+    }
+    return  x ** n;
+  }
+  alert(pow(num, power));
+
+</script>
+
+</body>
+</html>

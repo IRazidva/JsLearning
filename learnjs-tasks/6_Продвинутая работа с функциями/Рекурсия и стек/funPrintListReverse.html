@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>funPrintListReverse</title>
+</head>
+<body>
+<script>
+  function printListReversFor(list){
+      let  arr = [];
+      while (list){
+          arr.push(list.value);
+          list = list.next;
+      }
+      arr.reverse().map(i => alert(i));
+  }
+
+  function printListReversRec(list){
+    if (list.next) {
+      printListReversRec(list.next);
+    }
+      alert(list.value);
+  }
+
+  let list = {
+    value: 1,
+    next: {
+      value: 2,
+      next: {
+        value: 3,
+        next: {
+          value: 4,
+          next: null
+        }
+      }
+    }
+  };
+
+  printListReversFor(list);
+  printListReversRec(list);
+</script>
+
+</body>
+</html>

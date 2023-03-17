@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>funFib</title>
+</head>
+<body>
+<script>
+  function fib(n){
+    let f1 = 0;
+    let f2 = 1;
+    let curent = 1;
+    for (let i = 1; i <= n; i++){
+        curent = f1 + f2;
+        f1 = f2;
+        f2 = curent;
+    }
+    return curent;
+  }
+  alert(fib(77));
+</script>
+
+</body>
+</html>

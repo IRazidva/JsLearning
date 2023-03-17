@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  <title>deferDecorator</title>
+</head>
+<body>
+<script>
+  // Добавьте всем функциям в прототип метод defer(ms), который возвращает обёртку,
+  // откладывающую вызов функции на ms миллисекунд.
+
+  function f(a, b) {
+    alert(a + b);
+  }
+
+  function m(a, b) {
+    alert(a * b);
+  }
+
+  Function.prototype.defer = function(ms) {
+      let f = this;
+      return function(...args) {
+          setTimeout(() => f.apply(this, args), ms);
+      }
+  };
+
+  f.defer(1000)(1, 2); // выведет 3 через 1 секунду.
+  m.defer(10000)(2, 2); // выведет 4 через 10 секунд.
+
+</script>
+
+</body>
+</html>

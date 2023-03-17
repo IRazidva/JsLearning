@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Defer</title>
+</head>
+<body>
+<script>
+    // Добавьте всем функциям в прототип метод defer(ms),
+    //     который который вызывает функции через ms
+
+  function f() {
+    alert("Hello!");
+  }
+    function z() {
+        alert("HelloZZZZ!");
+    }
+
+
+  Function.prototype.defer = function(ms){
+    setTimeout(this, ms);
+  }
+
+  f.defer(1000); // выведет "Hello!" через 1 секунду
+    z.defer(10000); // выведет "HelloZZZZ!" через 10 секунд
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>funSum</title>
+</head>
+<body>
+<script>
+  function sum(a) {
+
+    return function(b) {
+      return a + b;
+    }
+  }
+
+  alert(sum(10)(42));
+  
+</script>
+
+</body>
+</html>

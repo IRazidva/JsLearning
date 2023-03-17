@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>funSumTo</title>
+</head>
+<body>
+<script>
+  function sumToFor(n){
+    let sum = 0;
+    for (let i = 1; i <= n; i++){
+      sum = sum + i;
+    }
+    return sum;
+  }
+
+    function sumToRec(n){
+    return (n == 1) ? n : (n + sumToRec( n - 1));
+  }
+
+  function sumToArith(n){
+    return n * (1 + n) / 2;
+  }
+
+  alert(sumToRec(100));
+  alert(sumToFor(100));
+  alert(sumToArith(100));
+
+</script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>funSpyDecorator</title>
+</head>
+<body>
+<script>
+
+  function work(a, b) {
+      alert( a + b );
+  }
+  function multipl(a, b) {
+      alert( a * b );
+  }
+
+  function spyDecorator(func){
+      func.calls = [];
+      return function  wrapper(...args){
+          func.calls.push(args);
+          return func.apply(this, args);
+      }
+  }
+
+  work = spyDecorator(work);
+  multipl = spyDecorator(multipl);
+
+  work(1,2);
+  work(4,5);
+  multipl(1,2);
+  multipl(4,5);
+
+
+</script>
+
+
+</body>
+</html>

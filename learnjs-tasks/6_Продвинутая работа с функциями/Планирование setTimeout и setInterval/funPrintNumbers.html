@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>funPrintNumbers</title>
+</head>
+<body>
+<script>
+    function printNumbersSetInterval(from, to) {
+        let current = from;
+        let fun = () => {
+            console.log(current);
+            if (current < to) {
+                current++;
+            } else {
+                clearInterval(timerId);
+            }
+        };
+        let timerId = setInterval(fun, 1000);
+    }
+
+    function printNumbersSetTimeout(from, to) {
+        let current = from;
+        const fun = () => {
+            console.log(current);
+            if (current < to) {
+                current++;
+                setTimeout(fun, 1000);
+            }
+        };
+        setTimeout(fun, 1000);
+
+    }
+
+
+    printNumbersSetInterval(5, 10);
+    printNumbersSetTimeout(5,10);
+</script>
+
+</body>
+</html>

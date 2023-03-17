@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>funDelayDecorator</title>
+</head>
+<body>
+<script>
+  function f(x) {
+    alert(x);
+  }
+  function multipl(a, b) {
+    alert( a * b );
+  }
+
+  function delayDecorator(func, ms){
+      let timer;
+      return function (...args){
+          clearTimeout(timer);
+          timer = setTimeout(() => {func.apply(this, args)}, ms)
+      }
+  }
+  f = delayDecorator(f, 1000);
+  multipl = delayDecorator(multipl, 1500);
+
+  f(1);
+  f(4);
+  multipl(1,2);
+  multipl(4,5);
+</script>
+
+</body>
+</html>

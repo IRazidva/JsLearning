@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>funSumWithСlosure</title>
+</head>
+<body>
+<script>
+    function sum(a) {
+        let res = a;
+         function fun(b) {
+            res = a + b;
+            return fun;
+        }
+
+        fun.toString = function (){
+             return res;
+        }
+         return fun;
+    }
+
+
+    alert(sum(1)(2));
+    alert(sum(1)(2)(3));
+    alert(sum(5)(-1)(2));
+    alert(sum(6)(-1)(-2)(-3));
+    alert(sum(0)(1)(2)(3)(4)(5));
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>funDebounceDecorator</title>
+</head>
+<body>
+<script>
+  function debounceDecorator(func, ms){
+      let isWait = false;
+      return function () {
+          if (isWait) {
+              return;
+          } else {
+              func.apply(this, arguments);
+          }
+          isWait = true;
+          setTimeout(() => (isWait = false), ms);
+      };
+  }
+
+  f = debounceDecorator(console.log, 1000);
+  f(1); // выполняется немедленно
+  f(2); // проигнорирован
+  setTimeout( () => f(3), 100); // проигнорирован (прошло только 100 мс)
+  setTimeout( () => f(4), 1100); // выполняется
+  setTimeout( () => f(5), 1500);
+</script>
+
+</body>
+</html>
